@@ -38,6 +38,7 @@
 
         lstCandidate.SelectedIndex = 0
 
+
     End Sub
 
     Private Sub btnDisplayVotes_Click(sender As Object, e As EventArgs) Handles btnDisplayVotes.Click
