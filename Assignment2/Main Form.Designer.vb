@@ -53,7 +53,6 @@ Partial Class frmMain
         Me.lstCandidate.Location = New System.Drawing.Point(16, 34)
         Me.lstCandidate.Name = "lstCandidate"
         Me.lstCandidate.Size = New System.Drawing.Size(137, 106)
-        Me.lstCandidate.Sorted = True
         Me.lstCandidate.TabIndex = 1
         '
         'btnSave
