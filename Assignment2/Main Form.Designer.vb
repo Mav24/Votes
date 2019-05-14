@@ -50,7 +50,6 @@ Partial Class frmMain
         '
         Me.lstCandidate.FormattingEnabled = True
         Me.lstCandidate.ItemHeight = 17
-        Me.lstCandidate.Items.AddRange(New Object() {"Mark Stone", "Sam Perez", "Sheima Patel"})
         Me.lstCandidate.Location = New System.Drawing.Point(16, 34)
         Me.lstCandidate.Name = "lstCandidate"
         Me.lstCandidate.Size = New System.Drawing.Size(137, 106)
@@ -165,7 +164,8 @@ Partial Class frmMain
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmMain"
-        Me.Text = "Warren High School"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "+"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
