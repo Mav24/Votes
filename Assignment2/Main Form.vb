@@ -71,37 +71,10 @@ Public Class frmMain
         Me.Close()
     End Sub
 
-    Private Sub ClearLabels(sender As Object, e As EventArgs) Handles lstCandidate.SelectedIndexChanged, btnSave.Click
+    Private Sub ClearLabels(sender As Object, e As EventArgs) Handles btnSave.Click, lstCandidate.SelectedIndexChanged
 
         lblMark.Text = String.Empty
         lblSam.Text = String.Empty
         lblSheima.Text = String.Empty
-    End Sub
-
-    Private Sub lstCandidate_MouseClick(sender As Object, e As MouseEventArgs) Handles lstCandidate.MouseClick
-        Dim index As Integer = lstCandidate.SelectedIndex
-        Dim results As DialogResult
-        results = MessageBox.Show($"Would you like to vote for {lstCandidate.Text}?", "Vote!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
-        If results = DialogResult.Yes Then
-            Dim outFile As IO.StreamWriter
-
-
-            If IO.File.Exists("votes.txt") Then
-                outFile = IO.File.AppendText("votes.txt")
-                Select Case index
-                    Case 0
-                        outFile.WriteLine("Mark Stone")
-                    Case 1
-                        outFile.WriteLine("Sheima Patel")
-                    Case 2
-                        outFile.WriteLine("Sam Perez")
-                    Case Else
-
-                End Select
-                outFile.Close()
-            Else
-                MessageBox.Show("Can't find file!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        End If
     End Sub
 End Class
