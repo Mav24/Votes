@@ -25,23 +25,11 @@ Public Class frmMain
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
         Dim outFile As IO.StreamWriter
-        Dim selection As Integer
-
-        ' Gets selected Candidate
-        selection = lstCandidate.SelectedIndex
 
         If IO.File.Exists("votes.txt") Then
             outFile = IO.File.AppendText("votes.txt")
-            Select Case selection
-                Case 0
-                    outFile.WriteLine("Mark Stone")
-                Case 1
-                    outFile.WriteLine("Sheima Patel")
-                Case 2
-                    outFile.WriteLine("Sam Perez")
-                Case Else
-
-            End Select
+            ' Write candidate name to file
+            outFile.WriteLine(lstCandidate.SelectedItem)
             outFile.Close()
         Else
             MessageBox.Show("Can't find file!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
