@@ -58,7 +58,8 @@ Public Class frmMain
                 End Select
             Loop
             inFile.Close()
-
+        Else
+            MessageBox.Show("Can't find file!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         'Display vote count for each person
