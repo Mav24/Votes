@@ -6,10 +6,10 @@ Option Explicit On
 Option Strict On
 Option Infer Off
 
-Public Class frmMain
+Public Class MainForm
 
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ' Fill list box with candidates
         Dim candidateNames() As String = {"Mark Stone", "Sheima Patel", "Sam Perez"}
